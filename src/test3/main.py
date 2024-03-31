@@ -30,8 +30,8 @@ class Solution:
                 j += 1
                 continue
                 # there are only 3 cases:
-                # 1) B[j] is in the gap of res[-1] and A[i], or  insert B[j] and move j forward
-                # 2) A[i] is in the gap of res[-1] and B[j], or  insert A[i] and move j forward
+                # 1) A[i], B[j] are not overlaping, B[j] is in the gap btw res[-1] and A[i], just insert B[j] to res and move j forward
+                # 2) A[i], B[j] are not overlaping, A[i] is in the gap btw res[-1] and B[j], just insert A[i] to res and move j forward
                 # 3) A[i], B[j] overlaps, then append the union to res[-1], move i, j forward
             if br < al:
                 res.append(B[j])
